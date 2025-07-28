@@ -9,3 +9,8 @@ From primary school to the end of high school, are students getting more or less
 ### Non-Functional
 - Usability: GUI must allow simple interaction with data, "README" document oultines all aspects of the project, including thesis, requirements, code tests, and evaluation.
 - Reliability: Data is cross-referenced and compared to various sources.
+## Research
+### SEE-I Paragraph
+Throughout much of the world, particularly in the countries of India, China and South Korea, research indicates that school profiency is on the decline as students progress from primary school to the end of high school. In other words, it seems that, as much as it may be hoped for, the relation between increase in academic performance and academic experience is indeed not proportional.As shown in a recent government survey, student performance in India from Class 3 to Class 6 to Class 9 has tracked a gradual decrease.
+### Source
+https://www.hindustantimes.com/india-news/literacy-and-numeracy-proficiency-drop-as-students-progress-to-higher-classes-govt-survey-101752014255531.html 
