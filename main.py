@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("Global_Education.csv")
+df = pd.read_csv("Global_Education.csv", encoding='ISO-8859-1')
 
 columns = ['Latitude', 
            'Longitude', 
@@ -25,6 +25,6 @@ columns = ['Latitude',
            'Unemployment_Rate'
 ]
 
-df = df.drop(columns)
+df = df.drop(columns=columns)
 
 df.to_csv('Global_Education_Cleaned.csv', index=False)
