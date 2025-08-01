@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('Global_Education.csv')
+df = pd.read_csv("Global_Education.csv")
 
 columns = ['Latitude', 
            'Longitude', 
