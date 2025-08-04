@@ -23,3 +23,45 @@ https://www.hindustantimes.com/india-news/literacy-and-numeracy-proficiency-drop
 ### Week 2 and Week 3
 I developed the code for filtering rows and columns for desired countries:
 #### Filter_columns.py
+The following code removes the unnecessary columns from the raw file and moves them to a cleaned file "Global_Education_Cleaned.csv"
+```
+columns = [ 
+           'Latitude ',
+           'Longitude', 
+           'OOSR_Pre0Primary_Age_Male', 
+           'OOSR_Pre0Primary_Age_Female', 
+           'OOSR_Primary_Age_Male', 
+           'OOSR_Primary_Age_Female',
+           'OOSR_Lower_Secondary_Age_Male',
+           'OOSR_Lower_Secondary_Age_Female',
+           'OOSR_Upper_Secondary_Age_Male',
+           'OOSR_Upper_Secondary_Age_Female',
+           'Completion_Rate_Primary_Male',
+           'Completion_Rate_Primary_Female',
+           'Completion_Rate_Lower_Secondary_Male',
+           'Completion_Rate_Lower_Secondary_Female',
+           'Completion_Rate_Upper_Secondary_Male',
+           'Completion_Rate_Upper_Secondary_Female',
+           'Birth_Rate',
+           'Gross_Primary_Education_Enrollment',
+           'Gross_Tertiary_Education_Enrollment',
+           'Unemployment_Rate',
+           'Youth_15_24_Literacy_Rate_Male',
+           'Youth_15_24_Literacy_Rate_Female'
+]
+
+df = df.drop(columns=columns)
+
+df.to_csv('Global_Education_Cleaned.csv', index=False)
+```
+#### Filter_rows.py
+The following code selects the rows for the desired countries and move them to a new file "Global_Ed_Cleaned2.csv", which will be used for final analysis.
+```
+df = pd.read_csv("Global_Education_Cleaned.csv", encoding='ISO-8859-1')
+
+rows = [7, 9, 24, 33, 36, 37, 38, 53, 54, 63, 64, 67, 68, 72, 85, 114, 126, 127, 133, 137, 139, 142, 143, 162, 173, 198]
+
+df = df.iloc[rows, :]
+
+df.to_csv("Global_Ed_Cleaned2.csv", index=False)
+```
