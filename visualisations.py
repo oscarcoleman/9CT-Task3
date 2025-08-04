@@ -4,7 +4,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# ------------- FINE-TUNE THIS TO SPECIFIC DATA
+# ----- TEMPLATE -----
 
 labels = ['A', 'B', 'C', 'D']
 values1 = [10, 15, 20, 25]
@@ -23,3 +23,9 @@ ax.set_ylabel('Values')
 ax.set_title('Grouped Bar Chart')
 ax.legend()
 plt.show()
+
+# ----- TEMPLATE -----
+
+# Scandanavia Graph
+
+labels = ['']

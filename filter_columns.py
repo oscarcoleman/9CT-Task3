@@ -1,8 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("Global_Education.csv", encoding='ISO-8859-1')
+df = pd.read_csv("Global_Education.csv", encoding='ISO-8859-1') # dataset to be used 
 
+# array contains all columns to be removed
 columns = [ 
            'Latitude ',
            'Longitude', 
@@ -28,8 +29,8 @@ columns = [
            'Youth_15_24_Literacy_Rate_Female'
 ]
 
-df = df.drop(columns=columns)
+df = df.drop(columns=columns) # drops columns from above array
 
-df.to_csv('Global_Education_Cleaned.csv', index=False)
+df.to_csv('Global_Education_Cleaned.csv', index=False) # moves cleaned data to new file
 
 
