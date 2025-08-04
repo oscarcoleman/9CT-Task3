@@ -15,4 +15,11 @@ From primary school to the end of high school, are students getting more or less
 In some countries of the world, such as India, research indicates that school profiency is on the decline as students progress from primary school to the end of high school. As shown in a recent Indian government survey, relative student performace in both literacy and mathematics has been shown to fall by a few percentage points from Class 3 to Class 6 and Class 6 to 9. Most dramatically of all, however, it is to be seen that while 53% of Class 6 students knew times tables up to ten, only 28% could solve problems related to percentages by Class 9. On the whole, this is not a promising indication toward the effectiveness of continuous academic pursuits and deserves consideration.
 ### Source
 https://www.hindustantimes.com/india-news/literacy-and-numeracy-proficiency-drop-as-students-progress-to-higher-classes-govt-survey-101752014255531.html 
+## Code
+### Raw CSV file
 
+- ADD LINK
+
+### Week 2 and Week 3
+I developed the code for filtering rows and columns for desired countries:
+#### Filter_columns.py
