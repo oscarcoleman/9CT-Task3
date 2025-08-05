@@ -59,7 +59,7 @@ The following code selects the rows for the desired countries and move them to a
 ```
 df = pd.read_csv("Global_Education_Cleaned.csv", encoding='ISO-8859-1')
 
-rows = [7, 9, 24, 33, 36, 37, 38, 53, 54, 63, 64, 67, 68, 72, 85, 114, 126, 127, 133, 137, 139, 142, 143, 162, 173, 198]
+rows = [7, 9, 24, 33, 36, 37, 38, 50, 53, 54, 63, 64, 67, 68, 72, 85, 114, 126, 127, 133, 137, 139, 142, 143, 162, 173, 198]
 
 df = df.iloc[rows, :]
 
