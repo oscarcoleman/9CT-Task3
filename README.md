@@ -122,11 +122,13 @@ plt.savefig('eu_math.png')
 Explanation:
 - rows_eu: list of indeces from Global_Ed_Cleaned2.csv that consists of each country being researched and their accompanying data
 - values1_eu (as well as 2, 3, 4, 5, 6): finds specific data from column, e.g of primary school math or high school literacy.
-- 
-
-- PROVIDE CODE AND EXPLAIN:
+- The first block of code below is as in the more complete above code, however it is specific to such. The second attached code below is regular for the rest. The code was changed for the European data due to a problem in linking the values data and the labels data, namely that the label was ascribed to its proper index + 1.
 ```
 labels = df.iloc[rows_eu, 0].tolist()
 labels_shifted = labels[:1] + labels[1:]
+```
+
+```
+labels = df.iloc[rows_ca, 0].tolist()
 ```
 ## EXPLAIN SCORE MEANING
