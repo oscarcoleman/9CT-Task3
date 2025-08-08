@@ -67,6 +67,7 @@ df.to_csv("Global_Ed_Cleaned2.csv", index=False)
 ```
 ### Week 3 Continued
 #### Visualisations.py
+##### Individual Country Display
 The following code is for the display of data concerning Europe. I, as can be seen in visualisations.py, have done the same for each region with the specific details, particularly the rows, changed as per the region:
 ```
 # ----- EUROPE LITERACY
@@ -122,7 +123,7 @@ plt.savefig('eu_math.png')
 Explanation:
 - rows_eu: list of indeces from Global_Ed_Cleaned2.csv that consists of each country being researched and their accompanying data
 - values1_eu (as well as 2, 3, 4, 5, 6): finds specific data from column, e.g of primary school math or high school literacy.
-- The first block of code below is as in the more complete above code, however it is specific to such. The second attached code below is regular for the rest. The code was changed for the European data due to a problem in linking the values data and the labels data, namely that the label was ascribed to its proper index + 1.
+- The first block of code below is as in the more complete above code, however it is specific to such. The second attached code below is regular for the rest of visualisations.py. The code was changed for the European data due to a problem in linking the values data and the labels data, namely that the label was ascribed to an index one greater than desirable.
 ```
 labels = df.iloc[rows_eu, 0].tolist()
 labels_shifted = labels[:1] + labels[1:]
@@ -130,5 +131,33 @@ labels_shifted = labels[:1] + labels[1:]
 
 ```
 labels = df.iloc[rows_ca, 0].tolist()
+```
+##### Avg regional scores
+The following code is again specific to the European data, but is only slightly tweaked for the rest of the countries. Its aim is to find a set of average scores for each region which can later be used to represent that region in the world data:
+```
+# EUROPE
+total_values1_eu = values1_eu.sum()
+country_count = len(rows_ca)
+avg_total_values1_eu = total_values1_eu / country_count
+
+total_values2_eu = values2_eu.sum()
+country_count = len(rows_ca)
+avg_total_values2_eu = total_values2_eu / country_count
+
+total_values3_eu = values3_eu.sum()
+country_count = len(rows_ca)
+avg_total_values3_eu = total_values3_eu / country_count
+
+total_values4_eu = values4_eu.sum()
+country_count = len(rows_ca)
+avg_total_values4_eu = total_values4_eu / country_count
+
+total_values5_eu = values5_eu.sum()
+country_count = len(rows_ca)
+avg_total_values5_eu = total_values5_eu / country_count
+
+total_values6_eu = values6_eu.sum()
+country_count = len(rows_ca)
+avg_total_values6_eu = total_values6_eu / country_count
 ```
 ## EXPLAIN SCORE MEANING
