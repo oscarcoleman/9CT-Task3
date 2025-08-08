@@ -72,3 +72,4 @@ df.to_csv("Global_Ed_Cleaned2.csv", index=False)
 labels = df.iloc[rows_eu, 0].tolist()
 labels_shifted = labels[:1] + labels[1:]
 ```
+## EXPLAIN SCORE MEANING
