@@ -66,7 +66,64 @@ df = df.iloc[rows, :]
 df.to_csv("Global_Ed_Cleaned2.csv", index=False)
 ```
 ### Week 3 Continued
-#### Visualisation.py
+#### Visualisations.py
+The following code is for the display of data concerning Europe. I, as can be seen in visualisations.py, have done the same for each region with the specific details, particularly the rows, changed as per the region:
+```
+# ----- EUROPE LITERACY
+
+rows_eu = [10, 12, 14, 16, 22, 23, 26] 
+
+values1_eu = df.iloc[rows_eu, 1] 
+values2_eu = df.iloc[rows_eu, 3]
+values3_eu = df.iloc[rows_eu, 5]
+
+labels = df.iloc[rows_eu, 0].tolist()
+labels_shifted = labels[:1] + labels[1:]
+
+
+x = np.arange(len(labels_shifted)) 
+width = 0.2
+
+fig, ax = plt.subplots(figsize=(12, 6))
+
+ax.bar(x - width, values1_eu, width, label='Mid-Primary School')
+ax.bar(x, values2_eu, width, label='End-Primary School')
+ax.bar(x + width, values3_eu, width, label='End-High School')
+
+ax.set_xticks(x)
+ax.set_xticklabels(labels_shifted, rotation=45, ha='right')
+ax.set_ylabel('Score')
+ax.set_title('Europe Student Literacy Performance')
+ax.legend()
+plt.savefig('eu_literacy.png')
+
+# ----- EUROPE MATH
+
+values4_eu = df.iloc[rows_eu, 2] 
+values5_eu = df.iloc[rows_eu, 4]
+values6_eu = df.iloc[rows_eu, 6]
+
+x = np.arange(len(labels_shifted)) 
+width = 0.2
+
+fig, ax = plt.subplots(figsize=(12, 6))
+
+ax.bar(x - width, values4_eu, width, label='Mid-Primary School')
+ax.bar(x, values5_eu, width, label='End-Primary School')
+ax.bar(x + width, values6_eu, width, label='End-High School')
+
+ax.set_xticks(x)
+ax.set_xticklabels(labels_shifted, rotation=45, ha='right')
+ax.set_ylabel('Score')
+ax.set_title('Europe Student Math Performance')
+ax.legend()
+plt.savefig('eu_math.png')
+```
+Explanation:
+- rows_eu: list of indeces from Global_Ed_Cleaned2.csv that consists of each country being researched and their accompanying data
+- values1_eu (as well as 2, 3, 4, 5, 6): finds specific data from column, e.g of primary school math or high school literacy.
+- 
+
 - PROVIDE CODE AND EXPLAIN:
 ```
 labels = df.iloc[rows_eu, 0].tolist()
