@@ -160,4 +160,7 @@ total_values6_eu = values6_eu.sum()
 country_count = len(rows_ca)
 avg_total_values6_eu = total_values6_eu / country_count
 ```
+- values.sum creates a sum of all scores within country
+- country count is equal to the total number of indeces within each set of rows
+- avg = sum / n of rows
 ## EXPLAIN SCORE MEANING
