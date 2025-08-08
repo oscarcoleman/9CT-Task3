@@ -32,7 +32,7 @@ plt.show()
 '''
 
 # ----- SCANDANAVIA LITERACY 
-
+'''
 rows_scan = [7, 10, 19, 25] 
 
 values1_scan = df.iloc[rows_scan, 1] 
@@ -55,8 +55,6 @@ ax.legend()
 plt.show()
 
 # ----- SCANDANAVIA MATH 
-
-rows_scan = [7, 10, 19, 25] 
 
 values3_scan = df.iloc[rows_scan, 2] 
 values4_scan = df.iloc[rows_scan, 6]
@@ -107,8 +105,6 @@ plt.show()
 
 # ----- EUROPE MATH
 
-rows_eu = [11, 13, 15, 17, 22, 24, 25] 
-
 values1_eu = df.iloc[rows_eu, 2] 
 values2_eu = df.iloc[rows_eu, 4]
 values3_eu = df.iloc[rows_eu, 6]
@@ -132,3 +128,52 @@ ax.set_ylabel('Score')
 ax.set_title('Europe Student Math Performance')
 ax.legend()
 plt.show()
+
+# ----- CENTRAL AMERICA LITERACY 
+
+rows_ca = [8, 14, 16, 20] 
+
+values1_ca = df.iloc[rows_ca, 1] 
+values2_ca = df.iloc[rows_ca, 3]
+values3_ca = df.iloc[rows_ca, 5]
+
+labels = df.iloc[rows_ca, 0].tolist()
+
+x = np.arange(len(labels)) 
+width = 0.2
+
+fig, ax = plt.subplots(figsize=(12, 6))
+ax.bar(x - width, values1_ca, width, label='Mid-Primary School')
+ax.bar(x, values2_ca, width, label='End-Primary School')
+ax.bar(x + width, values3_ca, width, label='End-High School')
+
+ax.set_xticks(x)
+ax.set_xticklabels(labels)
+ax.set_ylabel('Score')
+ax.set_title('Central America and Carribeans Student Literacy Performance')
+ax.legend()
+plt.show()
+
+# ----- CENTRAL AMERICA MATH 
+
+values1_ca = df.iloc[rows_ca, 2] 
+values2_ca = df.iloc[rows_ca, 4]
+values3_ca = df.iloc[rows_ca, 6]
+
+labels = df.iloc[rows_ca, 0].tolist()
+
+x = np.arange(len(labels)) 
+width = 0.2
+
+fig, ax = plt.subplots(figsize=(12, 6))
+ax.bar(x - width, values1_ca, width, label='Mid-Primary School')
+ax.bar(x, values2_ca, width, label='End-Primary School')
+ax.bar(x + width, values3_ca, width, label='End-High School')
+
+ax.set_xticks(x)
+ax.set_xticklabels(labels)
+ax.set_ylabel('Score')
+ax.set_title('Central America and Carribeans Student Math Performance')
+ax.legend()
+plt.show()
+'''
