@@ -66,10 +66,101 @@ df = df.iloc[rows, :]
 df.to_csv("Global_Ed_Cleaned2.csv", index=False)
 ```
 ### Week 3 Continued
-#### Visualisation.py
-- PROVIDE CODE AND EXPLAIN:
+#### Visualisations.py
+##### Individual Country Display
+The following code is for the display of data concerning Europe. I, as can be seen in visualisations.py, have done the same for each region with the specific details, particularly the rows, changed as per the region:
+```
+# ----- EUROPE LITERACY
+
+rows_eu = [10, 12, 14, 16, 22, 23, 26] 
+
+values1_eu = df.iloc[rows_eu, 1] 
+values2_eu = df.iloc[rows_eu, 3]
+values3_eu = df.iloc[rows_eu, 5]
+
+labels = df.iloc[rows_eu, 0].tolist()
+labels_shifted = labels[:1] + labels[1:]
+
+
+x = np.arange(len(labels_shifted)) 
+width = 0.2
+
+fig, ax = plt.subplots(figsize=(12, 6))
+
+ax.bar(x - width, values1_eu, width, label='Mid-Primary School')
+ax.bar(x, values2_eu, width, label='End-Primary School')
+ax.bar(x + width, values3_eu, width, label='End-High School')
+
+ax.set_xticks(x)
+ax.set_xticklabels(labels_shifted, rotation=45, ha='right')
+ax.set_ylabel('Score')
+ax.set_title('Europe Student Literacy Performance')
+ax.legend()
+plt.savefig('eu_literacy.png')
+
+# ----- EUROPE MATH
+
+values4_eu = df.iloc[rows_eu, 2] 
+values5_eu = df.iloc[rows_eu, 4]
+values6_eu = df.iloc[rows_eu, 6]
+
+x = np.arange(len(labels_shifted)) 
+width = 0.2
+
+fig, ax = plt.subplots(figsize=(12, 6))
+
+ax.bar(x - width, values4_eu, width, label='Mid-Primary School')
+ax.bar(x, values5_eu, width, label='End-Primary School')
+ax.bar(x + width, values6_eu, width, label='End-High School')
+
+ax.set_xticks(x)
+ax.set_xticklabels(labels_shifted, rotation=45, ha='right')
+ax.set_ylabel('Score')
+ax.set_title('Europe Student Math Performance')
+ax.legend()
+plt.savefig('eu_math.png')
+```
+Explanation:
+- rows_eu: list of indeces from Global_Ed_Cleaned2.csv that consists of each country being researched and their accompanying data
+- values1_eu (as well as 2, 3, 4, 5, 6): finds specific data from column, e.g of primary school math or high school literacy.
+- The first block of code below is as in the more complete above code, however it is specific to such. The second attached code below is regular for the rest of visualisations.py. The code was changed for the European data due to a problem in linking the values data and the labels data, namely that the label was ascribed to an index one greater than desirable.
 ```
 labels = df.iloc[rows_eu, 0].tolist()
 labels_shifted = labels[:1] + labels[1:]
 ```
+
+```
+labels = df.iloc[rows_ca, 0].tolist()
+```
+##### Avg regional scores
+The following code is again specific to the European data, but is only slightly tweaked for the rest of the countries. Its aim is to find a set of average scores for each region which can later be used to represent that region in the world data:
+```
+# EUROPE
+total_values1_eu = values1_eu.sum()
+country_count = len(rows_ca)
+avg_total_values1_eu = total_values1_eu / country_count
+
+total_values2_eu = values2_eu.sum()
+country_count = len(rows_ca)
+avg_total_values2_eu = total_values2_eu / country_count
+
+total_values3_eu = values3_eu.sum()
+country_count = len(rows_ca)
+avg_total_values3_eu = total_values3_eu / country_count
+
+total_values4_eu = values4_eu.sum()
+country_count = len(rows_ca)
+avg_total_values4_eu = total_values4_eu / country_count
+
+total_values5_eu = values5_eu.sum()
+country_count = len(rows_ca)
+avg_total_values5_eu = total_values5_eu / country_count
+
+total_values6_eu = values6_eu.sum()
+country_count = len(rows_ca)
+avg_total_values6_eu = total_values6_eu / country_count
+```
+- values.sum creates a sum of all scores within country
+- country count is equal to the total number of indeces within each set of rows
+- avg = sum / n of rows
 ## EXPLAIN SCORE MEANING
