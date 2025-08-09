@@ -279,55 +279,47 @@ plt.savefig('oc_math.png')
 # ----- CANADA LITERACY
 rows_can = [3] 
 
-values1_can = df.iloc[rows_can, 1] 
-values2_can = df.iloc[rows_can, 5]
+values1_can = df.iloc[rows_can, 1].iloc[0]  # scalar
+values2_can = df.iloc[rows_can, 5].iloc[0]  # scalar
 
 # ----- CANADA MATH
-values3_can = df.iloc[rows_can, 2] 
-values4_can = df.iloc[rows_can, 6]
+values3_can = df.iloc[rows_can, 2].iloc[0]  # scalar
+values4_can = df.iloc[rows_can, 6].iloc[0]  # scalar
 
 # ------ AVG REGIONAL SCORES 
 
 # SCANDANAVIA
 total_values1_scan = values1_scan.sum()
-country_count = len(rows_me)
+country_count = len(rows_scan)
 avg_total_values1_scan = total_values1_scan / country_count
 
-total_values3_scan = values2_scan.sum()
-country_count = len(rows_me)
+total_values2_scan = values2_scan.sum()
+avg_total_values2_scan = total_values2_scan / country_count
+
+total_values3_scan = values3_scan.sum()
 avg_total_values3_scan = total_values3_scan / country_count
 
-total_values4_scan = values3_scan.sum()
-country_count = len(rows_me)
+total_values4_scan = values4_scan.sum()
 avg_total_values4_scan = total_values4_scan / country_count
-
-total_values6_scan = values4_scan.sum()
-country_count = len(rows_me)
-avg_total_values6_scan = total_values6_scan / country_count
 
 # EUROPE
 total_values1_eu = values1_eu.sum()
-country_count = len(rows_ca)
+country_count = len(rows_eu)
 avg_total_values1_eu = total_values1_eu / country_count
 
 total_values2_eu = values2_eu.sum()
-country_count = len(rows_ca)
 avg_total_values2_eu = total_values2_eu / country_count
 
 total_values3_eu = values3_eu.sum()
-country_count = len(rows_ca)
 avg_total_values3_eu = total_values3_eu / country_count
 
 total_values4_eu = values4_eu.sum()
-country_count = len(rows_ca)
 avg_total_values4_eu = total_values4_eu / country_count
 
 total_values5_eu = values5_eu.sum()
-country_count = len(rows_ca)
 avg_total_values5_eu = total_values5_eu / country_count
 
 total_values6_eu = values6_eu.sum()
-country_count = len(rows_ca)
 avg_total_values6_eu = total_values6_eu / country_count
 
 # CENTRAL AMERICA
@@ -336,23 +328,18 @@ country_count = len(rows_ca)
 avg_total_values1_ca = total_values1_ca / country_count
 
 total_values2_ca = values2_ca.sum()
-country_count = len(rows_ca)
 avg_total_values2_ca = total_values2_ca / country_count
 
 total_values3_ca = values3_ca.sum()
-country_count = len(rows_ca)
 avg_total_values3_ca = total_values3_ca / country_count
 
 total_values4_ca = values4_ca.sum()
-country_count = len(rows_ca)
 avg_total_values4_ca = total_values4_ca / country_count
 
 total_values5_ca = values5_ca.sum()
-country_count = len(rows_ca)
 avg_total_values5_ca = total_values5_ca / country_count
 
 total_values6_ca = values6_ca.sum()
-country_count = len(rows_ca)
 avg_total_values6_ca = total_values6_ca / country_count
 
 # SOUTH AMERICA
@@ -361,23 +348,18 @@ country_count = len(rows_sa)
 avg_total_values1_sa = total_values1_sa / country_count
 
 total_values2_sa = values2_sa.sum()
-country_count = len(rows_sa)
 avg_total_values2_sa = total_values2_sa / country_count
 
 total_values3_sa = values3_sa.sum()
-country_count = len(rows_sa)
 avg_total_values3_sa = total_values3_sa / country_count
 
 total_values4_sa = values4_sa.sum()
-country_count = len(rows_sa)
 avg_total_values4_sa = total_values4_sa / country_count
 
 total_values5_sa = values5_sa.sum()
-country_count = len(rows_sa)
 avg_total_values5_sa = total_values5_sa / country_count
 
 total_values6_sa = values6_sa.sum()
-country_count = len(rows_sa)
 avg_total_values6_sa = total_values6_sa / country_count
 
 # MIDDLE EAST
@@ -385,59 +367,60 @@ total_values1_me = values1_me.sum()
 country_count = len(rows_me)
 avg_total_values1_me = total_values1_me / country_count
 
-total_values3_me = values2_me.sum()
-country_count = len(rows_me)
+total_values2_me = values2_me.sum()
+avg_total_values2_me = total_values2_me / country_count
+
+total_values3_me = values3_me.sum()
 avg_total_values3_me = total_values3_me / country_count
 
-total_values4_me = values3_me.sum()
-country_count = len(rows_me)
+total_values4_me = values4_me.sum()
 avg_total_values4_me = total_values4_me / country_count
-
-total_values6_me = values4_me.sum()
-country_count = len(rows_me)
-avg_total_values6_me = total_values6_me / country_count
 
 # OCEANIA
 total_values1_oc = values1_oc.sum()
 country_count = len(rows_oc)
 avg_total_values1_oc = total_values1_oc / country_count
 
-total_values3_oc = values2_oc.sum()
-country_count = len(rows_oc)
+total_values2_oc = values2_oc.sum()
+avg_total_values2_oc = total_values2_oc / country_count
+
+total_values3_oc = values3_oc.sum()
 avg_total_values3_oc = total_values3_oc / country_count
 
-total_values4_oc = values3_oc.sum()
-country_count = len(rows_oc)
+total_values4_oc = values4_oc.sum()
 avg_total_values4_oc = total_values4_oc / country_count
-
-total_values6_oc = values4_oc.sum()
-country_count = len(rows_oc)
-avg_total_values6_oc = total_values6_oc / country_count
 
 # ----- WORLD LITERACY 
 
-values1_w = [avg_total_values1_scan,
-            avg_total_values1_eu,
-            avg_total_values1_ca,
-            avg_total_values1_sa,
-            avg_total_values1_me,
-            avg_total_values1_oc,
-            values1_can
-            ] 
+values1_w = [
+    avg_total_values1_scan,  
+    avg_total_values1_eu,    
+    avg_total_values1_ca,    
+    avg_total_values1_sa,    
+    avg_total_values1_me,    
+    avg_total_values1_oc,
+    values1_can             
+] 
 
-values2_w = [avg_total_values2_eu,
-            avg_total_values2_ca,
-            avg_total_values2_sa
-            ] 
+values2_w = [
+    np.nan,                  
+    avg_total_values2_eu,    
+    avg_total_values2_ca,    
+    avg_total_values2_sa,    
+    np.nan,                  
+    np.nan,                  
+    np.nan                  
+] 
 
-values3_w = [avg_total_values3_scan,
-            avg_total_values3_eu,
-            avg_total_values3_ca,
-            avg_total_values3_sa,
-            avg_total_values3_me,
-            avg_total_values3_oc,
-            values2_can
-            ] 
+values3_w = [
+    avg_total_values2_scan,  
+    avg_total_values3_eu,    
+    avg_total_values3_ca,    
+    avg_total_values3_sa,    
+    avg_total_values2_me,    
+    avg_total_values2_oc,    
+    values2_can              
+] 
 
 with open("regions.txt", "r") as txt_file:
     lines = txt_file.readlines()
@@ -457,33 +440,40 @@ ax.set_xticklabels(labels)
 ax.set_ylabel('Score')
 ax.set_title('World Student Literacy Performance')
 ax.legend()
-plt.show()
 plt.savefig('world_literacy.png')
+plt.show()
 
 # ----- WORLD MATH 
 
-values4_w = [avg_total_values4_scan,
-            avg_total_values4_eu,
-            avg_total_values4_ca,
-            avg_total_values4_sa,
-            avg_total_values4_me,
-            avg_total_values4_oc,
-            values3_can
-            ] 
+values4_w = [
+    avg_total_values3_scan,  
+    avg_total_values4_eu,
+    avg_total_values4_ca,    
+    avg_total_values4_sa,   
+    avg_total_values4_me,    
+    avg_total_values4_oc,   
+    values3_can             
+] 
 
-values5_w = [avg_total_values5_eu,
-            avg_total_values5_ca,
-            avg_total_values5_sa
-            ] 
+values5_w = [
+    np.nan,                 
+    avg_total_values5_eu,    
+    avg_total_values5_ca,    
+    avg_total_values5_sa,   
+    np.nan,                 
+    np.nan,                  
+    np.nan                  
+] 
 
-values6_w = [avg_total_values6_scan,
-            avg_total_values6_eu,
-            avg_total_values6_ca,
-            avg_total_values6_sa,
-            avg_total_values6_me,
-            avg_total_values6_oc,
-            values4_can
-            ] 
+values6_w = [
+    avg_total_values4_scan,  
+    avg_total_values6_eu,
+    avg_total_values6_ca,    
+    avg_total_values6_sa,    
+    avg_total_values4_me,   
+    avg_total_values4_oc,   
+    values4_can             
+] 
 
 x = np.arange(len(labels)) 
 width = 0.2
@@ -498,5 +488,5 @@ ax.set_xticklabels(labels)
 ax.set_ylabel('Score')
 ax.set_title('World Student Math Performance')
 ax.legend()
-plt.show()
 plt.savefig('world_math.png')
+plt.show()
