@@ -289,106 +289,101 @@ values4_can = df.iloc[rows_can, 6].iloc[0]  # scalar
 # ------ AVG REGIONAL SCORES 
 
 # SCANDANAVIA
-total_values1_scan = values1_scan.sum()
-country_count = len(rows_scan)
-avg_total_values1_scan = total_values1_scan / country_count
+values1_scan_clean = values1_scan.replace(0, np.nan)
+avg_total_values1_scan = values1_scan_clean.mean(skipna=True)
 
-total_values2_scan = values2_scan.sum()
-avg_total_values2_scan = total_values2_scan / country_count
+values2_scan_clean = values2_scan.replace(0, np.nan)
+avg_total_values2_scan = values2_scan_clean.mean(skipna=True)
 
-total_values3_scan = values3_scan.sum()
-avg_total_values3_scan = total_values3_scan / country_count
+values3_scan_clean = values3_scan.replace(0, np.nan)
+avg_total_values3_scan = values3_scan_clean.mean(skipna=True)
 
-total_values4_scan = values4_scan.sum()
-avg_total_values4_scan = total_values4_scan / country_count
+values4_scan_clean = values4_scan.replace(0, np.nan)
+avg_total_values4_scan = values4_scan_clean.mean(skipna=True)
 
 # EUROPE
-total_values1_eu = values1_eu.sum()
-country_count = len(rows_eu)
-avg_total_values1_eu = total_values1_eu / country_count
 
-total_values2_eu = values2_eu.sum()
-avg_total_values2_eu = total_values2_eu / country_count
+values1_eu_clean = values1_eu.replace(0, np.nan)
+avg_total_values1_eu = values1_eu_clean.mean(skipna=True)
 
-total_values3_eu = values3_eu.sum()
-avg_total_values3_eu = total_values3_eu / country_count
+values2_eu_clean = values2_eu.replace(0, np.nan)
+avg_total_values2_eu = values2_eu_clean.mean(skipna=True)
 
-total_values4_eu = values4_eu.sum()
-avg_total_values4_eu = total_values4_eu / country_count
+values3_eu_clean = values3_eu.replace(0, np.nan)
+avg_total_values3_eu = values3_eu_clean.mean(skipna=True)
 
-total_values5_eu = values5_eu.sum()
-avg_total_values5_eu = total_values5_eu / country_count
+values4_eu_clean = values4_eu.replace(0, np.nan)
+avg_total_values4_eu = values4_eu_clean.mean(skipna=True)
 
-total_values6_eu = values6_eu.sum()
-avg_total_values6_eu = total_values6_eu / country_count
+values5_eu_clean = values5_eu.replace(0, np.nan)
+avg_total_values5_eu = values5_eu_clean.mean(skipna=True)
+
+values6_eu_clean = values6_eu.replace(0, np.nan)
+avg_total_values6_eu = values6_eu_clean.mean(skipna=True)
 
 # CENTRAL AMERICA
-total_values1_ca = values1_ca.sum()
-country_count = len(rows_ca)
-avg_total_values1_ca = total_values1_ca / country_count
+values1_ca_clean = values1_ca.replace(0, np.nan)
+avg_total_values1_ca = values1_ca_clean.mean(skipna=True)
 
-total_values2_ca = values2_ca.sum()
-avg_total_values2_ca = total_values2_ca / country_count
+values2_ca_clean = values2_ca.replace(0, np.nan)
+avg_total_values2_ca = values2_ca_clean.mean(skipna=True)
 
-total_values3_ca = values3_ca.sum()
-avg_total_values3_ca = total_values3_ca / country_count
+values3_ca_clean = values3_ca.replace(0, np.nan)
+avg_total_values3_ca = values3_ca_clean.mean(skipna=True)
 
-total_values4_ca = values4_ca.sum()
-avg_total_values4_ca = total_values4_ca / country_count
+values4_ca_clean = values4_ca.replace(0, np.nan)
+avg_total_values4_ca = values4_ca_clean.mean(skipna=True)
 
-total_values5_ca = values5_ca.sum()
-avg_total_values5_ca = total_values5_ca / country_count
+values5_ca_clean = values5_ca.replace(0, np.nan)
+avg_total_values5_ca = values5_ca_clean.mean(skipna=True)
 
-total_values6_ca = values6_ca.sum()
-avg_total_values6_ca = total_values6_ca / country_count
+values6_ca_clean = values6_ca.replace(0, np.nan)
+avg_total_values6_ca = values6_ca_clean.mean(skipna=True)
 
 # SOUTH AMERICA
-total_values1_sa = values1_sa.sum()
-country_count = len(rows_sa)
-avg_total_values1_sa = total_values1_sa / country_count
+values1_sa_clean = values1_sa.replace(0, np.nan)
+avg_total_values1_sa = values1_sa_clean.mean(skipna=True)
 
-total_values2_sa = values2_sa.sum()
-avg_total_values2_sa = total_values2_sa / country_count
+values2_sa_clean = values2_sa.replace(0, np.nan)
+avg_total_values2_sa = values2_sa_clean.mean(skipna=True)
 
-total_values3_sa = values3_sa.sum()
-avg_total_values3_sa = total_values3_sa / country_count
+values3_sa_clean = values3_sa.replace(0, np.nan)
+avg_total_values3_sa = values3_sa_clean.mean(skipna=True)
 
-total_values4_sa = values4_sa.sum()
-avg_total_values4_sa = total_values4_sa / country_count
+values4_sa_clean = values4_sa.replace(0, np.nan)
+avg_total_values4_sa = values4_sa_clean.mean(skipna=True)
 
-total_values5_sa = values5_sa.sum()
-avg_total_values5_sa = total_values5_sa / country_count
+values5_sa_clean = values5_sa.replace(0, np.nan)
+avg_total_values5_sa = values5_sa_clean.mean(skipna=True)
 
-total_values6_sa = values6_sa.sum()
-avg_total_values6_sa = total_values6_sa / country_count
+values6_sa_clean = values6_sa.replace(0, np.nan)
+avg_total_values6_sa = values6_sa_clean.mean(skipna=True)
 
 # MIDDLE EAST
-total_values1_me = values1_me.sum()
-country_count = len(rows_me)
-avg_total_values1_me = total_values1_me / country_count
+values1_me_clean = values1_me.replace(0, np.nan)
+avg_total_values1_me = values1_me_clean.mean(skipna=True)
 
-total_values2_me = values2_me.sum()
-avg_total_values2_me = total_values2_me / country_count
+values2_me_clean = values2_me.replace(0, np.nan)
+avg_total_values2_me = values2_me_clean.mean(skipna=True)
 
-total_values3_me = values3_me.sum()
-avg_total_values3_me = total_values3_me / country_count
+values3_me_clean = values3_me.replace(0, np.nan)
+avg_total_values3_me = values3_me_clean.mean(skipna=True)
 
-total_values4_me = values4_me.sum()
-avg_total_values4_me = total_values4_me / country_count
+values4_me_clean = values4_me.replace(0, np.nan)
+avg_total_values4_me = values4_me_clean.mean(skipna=True)
 
 # OCEANIA
-total_values1_oc = values1_oc.sum()
-country_count = len(rows_oc)
-avg_total_values1_oc = total_values1_oc / country_count
+values1_oc_clean = values1_oc.replace(0, np.nan)
+avg_total_values1_oc = values1_oc_clean.mean(skipna=True)
 
-total_values2_oc = values2_oc.sum()
-avg_total_values2_oc = total_values2_oc / country_count
+values2_oc_clean = values2_oc.replace(0, np.nan)
+avg_total_values2_oc = values2_oc_clean.mean(skipna=True)
 
-total_values3_oc = values3_oc.sum()
-avg_total_values3_oc = total_values3_oc / country_count
+values3_oc_clean = values3_oc.replace(0, np.nan)
+avg_total_values3_oc = values3_oc_clean.mean(skipna=True)
 
-total_values4_oc = values4_oc.sum()
-avg_total_values4_oc = total_values4_oc / country_count
+values4_oc_clean = values4_oc.replace(0, np.nan)
+avg_total_values4_oc = values4_oc_clean.mean(skipna=True)
 
 # ----- WORLD LITERACY 
 
