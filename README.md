@@ -11,11 +11,15 @@ From primary school to the end of high school, are students getting more or less
 - Usability: GUI must allow simple interaction with data, "README" document oultines all aspects of the project, including thesis, requirements, code tests, and evaluation.
 - Reliability: Data is cross-referenced and compared to various sources.
 ## Research
-### SEE-I Paragraph
+### SEE-I Paragraphs
 International assessment data indicates that a prominent portion of Latin American and Carribean students are failing to meet basic profiency in mathematics and literacy, and that this is continuing to be exacerbated as they progress from primary school into high school. Specifically, over the past ten years UNESCO data indicates that while roughly one half of third-graders are meeting minimum proficiency requirements, this is falling to as little as a third, in mathematics, by high school. On the whole, this is generally indicative of a concerning failure, within poorer countries, of continual academic study to translate into improved academic performance.
+
+Students within western Europe, however, are shown with similiar assessment data to meet the minimum benchmark at an appreciably high level, with only a gradual decline into high school. Upon examination of the TMIS 2019 International Mathematics measurement data it is to be seen that 96%, 97%, 85% and 95% of students in the countries of England, Ireland, France and Portugal, respectively have met or exceeded the low benchmark. Continuing on into high school, it is to be noted that these measurements shift to 90%, 94%, 88% and 91%, respectively. Expectedly, and contrasting to students within Latin America and the Carribeans, this data is representative of the healthy continuation of academic performance in the developed nations.
 ### Sources
 - https://www.unesco.org/en/articles/unesco-warns-lack-progress-basic-learning-achievements-2013-latin-america-and-caribbean
-- https://www.unesco.org/en/articles/effects-pandemic-education-latin-america-and-caribbean-will-last-many-years-there-urgent-need 
+- https://www.unesco.org/en/articles/effects-pandemic-education-latin-america-and-caribbean-will-last-many-years-there-urgent-need
+- https://www.iea.nl/sites/default/files/2020-12/TIMSS-2019-International-Results-in-Mathematics-and-Science.pdf
+- https://www.iea.nl/sites/default/files/2020-12/TIMSS-2019-International-Results-in-Mathematics-and-Science.pdf
 ## Code
 ### Raw CSV file
 
