@@ -12,9 +12,10 @@ From primary school to the end of high school, are students getting more or less
 - Reliability: Data is cross-referenced and compared to various sources.
 ## Research
 ### SEE-I Paragraph
-In some countries of the world, such as India, research indicates that school profiency is on the decline as students progress from primary school to the end of high school. As shown in a recent Indian government survey, relative student performace in both literacy and mathematics has been shown to fall by a few percentage points from Class 3 to Class 6 and Class 6 to 9. Most dramatically of all, however, it is to be seen that while 53% of Class 6 students knew times tables up to ten, only 28% could solve problems related to percentages by Class 9. On the whole, this is not a promising indication toward the effectiveness of continuous academic pursuits and deserves consideration.
-### Source
-https://www.hindustantimes.com/india-news/literacy-and-numeracy-proficiency-drop-as-students-progress-to-higher-classes-govt-survey-101752014255531.html 
+International assessment data indicates that a prominent portion of Latin American and Carribean students are failing to meet basic profiency in mathematics and literacy, and that this is continuing to be exacerbated as they progress from primary school into high school. Specifically, over the past ten years UNESCO data indicates that while roughly one half of third-graders are meeting minimum proficiency requirements, this is falling to as little as a third, in mathematics, by high school. On the whole, this is generally indicative of a concerning failure, within poorer countries, of continual academic study to translate into improved academic performance.
+### Sources
+- https://www.unesco.org/en/articles/unesco-warns-lack-progress-basic-learning-achievements-2013-latin-america-and-caribbean
+- https://www.unesco.org/en/articles/effects-pandemic-education-latin-america-and-caribbean-will-last-many-years-there-urgent-need 
 ## Code
 ### Raw CSV file
 
