@@ -438,6 +438,12 @@ ax.legend()
 plt.savefig('world_literacy.png')
 plt.show()
 
+
+mean_val1_w = sum(values1_w) / len(values1_w)
+mean_val3_w = sum(values3_w) / len(values3_w)
+mean_decline = 100 - (mean_val3_w / mean_val1_w * 100)
+print(mean_decline)
+
 # ----- WORLD MATH 
 
 values4_w = [
