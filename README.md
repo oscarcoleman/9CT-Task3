@@ -166,4 +166,9 @@ avg_total_values6_eu = total_values6_eu / country_count
 - values.sum creates a sum of all scores within country
 - country count is equal to the total number of indeces within each set of rows
 - avg = sum / n of rows
-## EXPLAIN SCORE MEANING
+## Findings Analysis
+The research carried out in this project has served to indicate a few general trends that warrant discussion across, seperately, literacy and mathematics. Throughout the world, in literacy, there is a common downard trend from mid-primary school to the end of high school, with a mean decline of 22.65% across all regions. Although the drop is more substantial in developing countries, the trend is markedly visible all across the globe and, given the roughly even distribution of rich and poor countries, the average decline seems adequetly descriptive of the general trend.
+
+In mathematics, the most pronounced pattern is not one all-encompassing and general trend, but rather the substantial distinction between the developed and developing countries. While in the developed regions, such as Europe and Scandanavia, but also the given Middle Eastern countries, mathematical proficiency remains fairly steady throughout schooling (mostly around 80-90%, but closer to 30-40% for the Middle East), the undeveloped regions of Central and South America (including the Carribeans) undergo a severe drop, between mid-primary school and the end of high school, in excess of 50%, on average. 
+
+Beyond the key general trends to be extracted, there remain several specific regional anomalies worthy of note. For instance, while it is to be seen that most European countries have neglibible or minimally improved change in academic performance from ealry primary school to the end of high school, France's scores are shown to improve by a margin of roughly 30%.
