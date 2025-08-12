@@ -56,4 +56,5 @@ with tab_2:
 
 with tab_3:
     st.markdown("### Data Source and Score Meaning")
-    st.write("...")
+    st.write("https://www.kaggle.com/datasets/nelgiriyewithana/world-educational-data")
+    
