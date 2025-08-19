@@ -1,4 +1,7 @@
 # 9CT-Task3
+## GUI
+My Streamlit app containing the completion of my findings alongside my thesis and data is accessible via the following URL:
+https://9ct-task3-w5qozqkaydwelghspbwktn.streamlit.app/ 
 ## Thesis
 From primary school to the end of high school, are students getting more or less proficient in literacy and mathematics, in Middle East, Central America, South America, Europe, Scandanavia, Oceania and Canada, comparatively?
 ## Functional and Non-Functional Requirements
