@@ -5,22 +5,24 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('Global_Ed_Cleaned2.csv', encoding='ISO-8859-1')
+df = pd.read_csv('Global_Ed_Cleaned2.csv', encoding='ISO-8859-1') # creates dataframe for file to be used, has already been cleaned
 
 
 # ----- SCANDANAVIA LITERACY 
 
-rows_scan = [6, 9, 18, 27] 
+rows_scan = [6, 9, 18, 27] # contains indeces from dataframe in which Scandanavian data will be found
 
-values1_scan = df.iloc[rows_scan, 1] 
-values2_scan = df.iloc[rows_scan, 5]
+values1_scan = df.iloc[rows_scan, 1] # selects column for mid-primary literacy
+values2_scan = df.iloc[rows_scan, 5] # selects column for end-high literacy
 
-labels = df.iloc[rows_scan, 0].tolist()
+labels = df.iloc[rows_scan, 0].tolist() # string value from first column (country name) added to list
 
 x = np.arange(len(labels))  
 width = 0.35  # width of the bars
 
 fig, ax = plt.subplots()
+
+# creates bars per country
 ax.bar(x - width/2, values1_scan, width, label='Mid-Primary School')
 ax.bar(x + width/2, values2_scan, width, label='End-High School')
 
@@ -33,8 +35,8 @@ plt.savefig('scan_literacy.png')
 
 # ----- SCANDANAVIA MATH 
 
-values3_scan = df.iloc[rows_scan, 2] 
-values4_scan = df.iloc[rows_scan, 6]
+values3_scan = df.iloc[rows_scan, 2] # selects column for mid-primary math
+values4_scan = df.iloc[rows_scan, 6] # selects column for end-high math
 
 x = np.arange(len(labels)) 
 width = 0.35  # width of the bars
@@ -52,21 +54,21 @@ plt.savefig('scan_math.png')
 
 # ----- EUROPE LITERACY
 
-rows_eu = [10, 12, 14, 16, 22, 23, 26] 
+rows_eu = [10, 12, 14, 16, 22, 23, 26] # contains indeces from dataframe in which European data will be found
 
-values1_eu = df.iloc[rows_eu, 1] 
-values2_eu = df.iloc[rows_eu, 3]
-values3_eu = df.iloc[rows_eu, 5]
+values1_eu = df.iloc[rows_eu, 1] # selects column for mid-primary literacy
+values2_eu = df.iloc[rows_eu, 3] # selects column for end-primary literacy
+values3_eu = df.iloc[rows_eu, 5] # selects column for end-high literacy
 
-labels = df.iloc[rows_eu, 0].tolist()
-labels_shifted = labels[:1] + labels[1:]
-
+labels = df.iloc[rows_eu, 0].tolist() # string value from first column (country name) added to list
+labels_shifted = labels[:1] + labels[1:] # label values and indeces misaligned, ie each is shifted over to the next value in order
 
 x = np.arange(len(labels_shifted)) 
 width = 0.2
 
 fig, ax = plt.subplots(figsize=(12, 6))
 
+# creates bars per country
 ax.bar(x - width, values1_eu, width, label='Mid-Primary School')
 ax.bar(x, values2_eu, width, label='End-Primary School')
 ax.bar(x + width, values3_eu, width, label='End-High School')
@@ -80,15 +82,16 @@ plt.savefig('eu_literacy.png')
 
 # ----- EUROPE MATH
 
-values4_eu = df.iloc[rows_eu, 2] 
-values5_eu = df.iloc[rows_eu, 4]
-values6_eu = df.iloc[rows_eu, 6]
+values4_eu = df.iloc[rows_eu, 2] # selects column for mid-primary math
+values5_eu = df.iloc[rows_eu, 4] # selects column for end-primary math
+values6_eu = df.iloc[rows_eu, 6] # selects column for end-high math
 
 x = np.arange(len(labels_shifted)) 
 width = 0.2
 
 fig, ax = plt.subplots(figsize=(12, 6))
 
+# creates bars per country
 ax.bar(x - width, values4_eu, width, label='Mid-Primary School')
 ax.bar(x, values5_eu, width, label='End-Primary School')
 ax.bar(x + width, values6_eu, width, label='End-High School')
@@ -102,18 +105,20 @@ plt.savefig('eu_math.png')
 
 # ----- CENTRAL AMERICA LITERACY 
 
-rows_ca = [7, 13, 15, 19] 
+rows_ca = [7, 13, 15, 19] # contains indeces from dataframe in which Central American data will be found
 
-values1_ca = df.iloc[rows_ca, 1] 
-values2_ca = df.iloc[rows_ca, 3]
-values3_ca = df.iloc[rows_ca, 5]
+values1_ca = df.iloc[rows_ca, 1] # selects column for mid-primary literacy
+values2_ca = df.iloc[rows_ca, 3] # selects column for end-primary literacy
+values3_ca = df.iloc[rows_ca, 5] # selects column for end-high literacy
 
-labels = df.iloc[rows_ca, 0].tolist()
+labels = df.iloc[rows_ca, 0].tolist() # string value from first column (country name) added to list
 
 x = np.arange(len(labels)) 
 width = 0.2
 
 fig, ax = plt.subplots(figsize=(12, 6))
+
+# creates bars per country
 ax.bar(x - width, values1_ca, width, label='Mid-Primary School')
 ax.bar(x, values2_ca, width, label='End-Primary School')
 ax.bar(x + width, values3_ca, width, label='End-High School')
@@ -127,14 +132,16 @@ plt.savefig('ca_literacy.png')
 
 # ----- CENTRAL AMERICA MATH 
 
-values4_ca = df.iloc[rows_ca, 2] 
-values5_ca = df.iloc[rows_ca, 4]
-values6_ca = df.iloc[rows_ca, 6]
+values4_ca = df.iloc[rows_ca, 2] # selects column for mid-primary math
+values5_ca = df.iloc[rows_ca, 4] # selects column for end-primary math
+values6_ca = df.iloc[rows_ca, 6] # selects column for end-high math
 
 x = np.arange(len(labels)) 
 width = 0.2
 
 fig, ax = plt.subplots(figsize=(12, 6))
+
+# creates bars per country
 ax.bar(x - width, values4_ca, width, label='Mid-Primary School')
 ax.bar(x, values5_ca, width, label='End-Primary School')
 ax.bar(x + width, values6_ca, width, label='End-High School')
@@ -148,18 +155,20 @@ plt.savefig('ca_math.png')
 
 # ----- SOUTH AMERICA LITERACY 
 
-rows_sa = [0, 2, 4, 5, 8, 20, 21] 
+rows_sa = [0, 2, 4, 5, 8, 20, 21] # contains indeces from dataframe in which South American data will be found
 
-values1_sa = df.iloc[rows_sa, 1] 
-values2_sa = df.iloc[rows_sa, 3]
-values3_sa = df.iloc[rows_sa, 5]
+values1_sa = df.iloc[rows_sa, 1] # selects column for mid-primary literacy
+values2_sa = df.iloc[rows_sa, 3] # selects column for end-primary math
+values3_sa = df.iloc[rows_sa, 5] # selects column for end-high literacy
 
-labels = df.iloc[rows_sa, 0].tolist()
+labels = df.iloc[rows_sa, 0].tolist() # string value from first column (country name) added to list
 
 x = np.arange(len(labels)) 
 width = 0.2
 
 fig, ax = plt.subplots(figsize=(12, 6))
+
+# creates bars per country
 ax.bar(x - width, values1_sa, width, label='Mid-Primary School')
 ax.bar(x, values2_sa, width, label='End-Primary School')
 ax.bar(x + width, values3_sa, width, label='End-High School')
@@ -173,14 +182,16 @@ plt.savefig('sa_literacy.png')
 
 # ----- SOUTH AMERICA MATH 
 
-values4_sa = df.iloc[rows_sa, 2] 
-values5_sa = df.iloc[rows_sa, 4]
-values6_sa = df.iloc[rows_sa, 6]
+values4_sa = df.iloc[rows_sa, 2] # selects column for mid-primary math
+values5_sa = df.iloc[rows_sa, 4] # selects column for end-primary math
+values6_sa = df.iloc[rows_sa, 6] # selects column for end-high math
 
 x = np.arange(len(labels)) 
 width = 0.2
 
 fig, ax = plt.subplots(figsize=(12, 6))
+
+# creates bars per country
 ax.bar(x - width, values4_sa, width, label='Mid-Primary School')
 ax.bar(x, values5_sa, width, label='End-Primary School')
 ax.bar(x + width, values6_sa, width, label='End-High School')
@@ -194,17 +205,19 @@ plt.savefig('sa_math.png')
 
 # ----- MIDDLE EAST LITERACY 
 
-rows_me = [11, 24, 25, 28] 
+rows_me = [11, 24, 25, 28] # contains indeces from dataframe in which Middle Eastern data will be found
 
-values1_me = df.iloc[rows_me, 1] 
-values2_me = df.iloc[rows_me, 5]
+values1_me = df.iloc[rows_me, 1] # selects column for mid-primary literacy
+values2_me = df.iloc[rows_me, 5] # selects column for end-high literacy
 
-labels = df.iloc[rows_me, 0].tolist()
+labels = df.iloc[rows_me, 0].tolist() # string value from first column (country name) added to list
 
 x = np.arange(len(labels)) 
 width = 0.2
 
 fig, ax = plt.subplots(figsize=(12, 6))
+
+# creates bars per country
 ax.bar(x - width / 2, values1_me, width, label='Mid-Primary School')
 ax.bar(x + width / 2, values2_me, width, label='End-High School')
 
@@ -217,13 +230,15 @@ plt.savefig('me_literacy.png')
 
 # ----- MIDDLE EAST MATH 
 
-values3_me = df.iloc[rows_me, 2] 
-values4_me = df.iloc[rows_me, 6]
+values3_me = df.iloc[rows_me, 2] # selects column for mid-primary math
+values4_me = df.iloc[rows_me, 6] # selects column for end-high math
 
 x = np.arange(len(labels)) 
 width = 0.2
 
 fig, ax = plt.subplots(figsize=(12, 6))
+
+# creates bars per country
 ax.bar(x - width / 2, values3_me, width, label='Mid-Primary School')
 ax.bar(x + width / 2, values4_me, width, label='End-High School')
 
@@ -236,17 +251,19 @@ plt.savefig('me_math.png')
 
 # ----- OCEANIA LITERACY 
 
-rows_oc = [1, 17] 
+rows_oc = [1, 17] # contains indeces from dataframe in which Oceanic data will be found
 
-values1_oc = df.iloc[rows_oc, 1] 
-values2_oc = df.iloc[rows_oc, 5]
+values1_oc = df.iloc[rows_oc, 1] # selects column for mid-primary literacy
+values2_oc = df.iloc[rows_oc, 5] # selects column for end-high literacy
 
-labels = df.iloc[rows_oc, 0].tolist()
+labels = df.iloc[rows_oc, 0].tolist() # string value from first column (country name) added to list
 
 x = np.arange(len(labels)) 
 width = 0.2
 
 fig, ax = plt.subplots(figsize=(12, 6))
+
+# creates bars per country
 ax.bar(x - width / 2, values1_oc, width, label='Mid-Primary School')
 ax.bar(x + width / 2, values2_oc, width, label='End-High School')
 
@@ -259,13 +276,15 @@ plt.savefig('oc_literacy.png')
 
 # ----- OCEANIA MATH 
 
-values3_oc = df.iloc[rows_oc, 2] 
-values4_oc = df.iloc[rows_oc, 6]
+values3_oc = df.iloc[rows_oc, 2] # selects column for mid-primary math
+values4_oc = df.iloc[rows_oc, 6] # selects column for end-high math
 
 x = np.arange(len(labels)) 
 width = 0.2
 
 fig, ax = plt.subplots(figsize=(12, 6))
+
+# creates bars per country
 ax.bar(x - width / 2, values3_oc, width, label='Mid-Primary School')
 ax.bar(x + width / 2, values4_oc, width, label='End-High School')
 
@@ -277,20 +296,20 @@ ax.legend()
 plt.savefig('oc_math.png')
 
 # ----- CANADA LITERACY
-rows_can = [3] 
+rows_can = [3] # contains indeces from dataframe in which Canadian data will be found
 
-values1_can = df.iloc[rows_can, 1].iloc[0]  # scalar
-values2_can = df.iloc[rows_can, 5].iloc[0]  # scalar
+values1_can = df.iloc[rows_can, 1].iloc[0]  # selects column for mid-primary literacy
+values2_can = df.iloc[rows_can, 5].iloc[0]  # selects column for end-high literacy
 
 # ----- CANADA MATH
-values3_can = df.iloc[rows_can, 2].iloc[0]  # scalar
-values4_can = df.iloc[rows_can, 6].iloc[0]  # scalar
+values3_can = df.iloc[rows_can, 2].iloc[0] # selects column for mid-primary math
+values4_can = df.iloc[rows_can, 6].iloc[0]  # selects column for end-high literacy
 
 # ------ AVG REGIONAL SCORES 
 
 # SCANDANAVIA
-values1_scan_clean = values1_scan.replace(0, np.nan)
-avg_total_values1_scan = values1_scan_clean.mean(skipna=True)
+values1_scan_clean = values1_scan.replace(0, np.nan) # replaces '0' values with 'nan'
+avg_total_values1_scan = values1_scan_clean.mean(skipna=True) # cleans out 'nan' values and computes an avg
 
 values2_scan_clean = values2_scan.replace(0, np.nan)
 avg_total_values2_scan = values2_scan_clean.mean(skipna=True)
@@ -387,6 +406,7 @@ avg_total_values4_oc = values4_oc_clean.mean(skipna=True)
 
 # ----- WORLD LITERACY 
 
+# each list of the below likeness contains regional avg values for mid-primary, end-primary and end-high school math and literacy respectively
 values1_w = [
     avg_total_values1_scan,  
     avg_total_values1_eu,    
@@ -417,15 +437,17 @@ values3_w = [
     values2_can              
 ] 
 
-with open("regions.txt", "r") as txt_file:
+with open("regions.txt", "r") as txt_file: # opens txt file w/ list of regions
     lines = txt_file.readlines()
 
-labels = lines[:7]
+labels = lines[:7] # country names turned to labels
 
 x = np.arange(len(labels)) 
 width = 0.2
 
 fig, ax = plt.subplots(figsize=(12, 6))
+
+# creates bars per region
 ax.bar(x - width, values1_w, width, label='Mid-Primary School')
 ax.bar(x, values2_w, width, label='End-Primary School')
 ax.bar(x + width, values3_w, width, label='End-High School')
@@ -438,11 +460,6 @@ ax.legend()
 plt.savefig('world_literacy.png')
 plt.show()
 
-
-mean_val1_w = sum(values1_w) / len(values1_w)
-mean_val3_w = sum(values3_w) / len(values3_w)
-mean_decline = 100 - (mean_val3_w / mean_val1_w * 100)
-print(mean_decline)
 
 # ----- WORLD MATH 
 
@@ -480,6 +497,8 @@ x = np.arange(len(labels))
 width = 0.2
 
 fig, ax = plt.subplots(figsize=(12, 6))
+
+# creates bars per country
 ax.bar(x - width, values4_w, width, label='Mid-Primary School')
 ax.bar(x, values5_w, width, label='End-Primary School')
 ax.bar(x + width, values6_w, width, label='End-High School')
