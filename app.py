@@ -62,7 +62,7 @@ with tab_3:
     st.write("The specific numeric value of the score is representative of the percentage of students who met the minimum benchmark of academic competence in each subject area. For instance, a score of 80 in mathematics indicates 80% of students meeting the minimum mathematical proficiency within that country. ")
 
 with tab_4:
-    st.write("From primary school to the end of high school, are students getting more or less proficient in literacy and mathematics, in the Middle East, Central America, South America, Europe, Scandanavia, Oceania and Canada, comparatively?")
+   st.write("From primary school to the end of high school, are students getting more or less proficient in literacy and mathematics, in the Middle East, Central America, South America, Europe, Scandanavia, Oceania and Canada, comparatively?")
 
 with tab_5:
     st.write("The research carried out in this project has served to indicate a few general trends that warrant discussion across, seperately, literacy and mathematics. Throughout the world, in literacy, there is a common downard trend from mid-primary school to the end of high school, with a mean decline of 22.65% across all regions. Although the drop is more substantial in developing countries, the trend is markedly visible all across the globe and, given the roughly even distribution of rich and poor countries, the average decline seems adequetly descriptive of the general trend.")

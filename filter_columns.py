@@ -29,7 +29,7 @@ columns = [
            'Youth_15_24_Literacy_Rate_Female'
 ]
 
-df = df.drop(columns=columns) # drops columns from above array
+df = df.drop(columns=columns) # removes columns, as listed in above array, from dataset
 
 df.to_csv('Global_Education_Cleaned.csv', index=False) # moves cleaned data to new file
 

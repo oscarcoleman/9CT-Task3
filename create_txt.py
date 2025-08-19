@@ -1,3 +1,5 @@
+# creates a text file with teh folllowing countries
+
 with open("regions.txt", "w") as txt_file:
     txt_file.write("Scandanavia \n")
     txt_file.write("Europe \n")
