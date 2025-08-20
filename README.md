@@ -6,6 +6,8 @@ https://9ct-task3-w5qozqkaydwelghspbwktn.streamlit.app/
 ![Mind Map](Mind_map.png)
 ## Thesis
 From primary school to the end of high school, are students getting more or less proficient in literacy and mathematics, in Middle East, Central America, South America, Europe, Scandanavia, Oceania and Canada, comparatively?
+## Raw CSV file from Kaggle
+https://www.kaggle.com/datasets/nelgiriyewithana/world-educational-data 
 ## Functional and Non-Functional Requirements
 ### Functional
 - Filters global_education.csv for grade_2_3_proficiency_reading, grade_2_3_proficiency_math, lower_secondary_end_proficiency_reading, lower_secondary_end_proficiency_math, youths_15_24_literacy_rates_male, and youths_15_24_literacy_rates_female columns
