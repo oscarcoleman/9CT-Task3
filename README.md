@@ -1,4 +1,9 @@
 # 9CT-Task3
+## GUI
+My Streamlit app containing the completion of my findings alongside my thesis and data is accessible via the following URL:
+https://9ct-task3-w5qozqkaydwelghspbwktn.streamlit.app/ 
+## Mind map
+![Mind Map](Mind_map.png)
 ## Thesis
 From primary school to the end of high school, are students getting more or less proficient in literacy and mathematics, in Middle East, Central America, South America, Europe, Scandanavia, Oceania and Canada, comparatively?
 ## Functional and Non-Functional Requirements
@@ -68,7 +73,7 @@ df = df.iloc[rows, :]
 
 df.to_csv("Global_Ed_Cleaned2.csv", index=False)
 ```
-### Week 3 Continued
+### Week 3 Continued and Week 4
 #### Visualisations.py
 ##### Individual Country Display
 The following code is for the display of data concerning Europe. I, as can be seen in visualisations.py, have done the same for each region with the specific details, particularly the rows, changed as per the region:
@@ -139,33 +144,96 @@ labels = df.iloc[rows_ca, 0].tolist()
 The following code is again specific to the European data, but is only slightly tweaked for the rest of the countries. Its aim is to find a set of average scores for each region which can later be used to represent that region in the world data:
 ```
 # EUROPE
-total_values1_eu = values1_eu.sum()
-country_count = len(rows_ca)
-avg_total_values1_eu = total_values1_eu / country_count
+values1_eu_clean = values1_eu.replace(0, np.nan)
+avg_total_values1_eu = values1_eu_clean.mean(skipna=True)
 
-total_values2_eu = values2_eu.sum()
-country_count = len(rows_ca)
-avg_total_values2_eu = total_values2_eu / country_count
+values2_eu_clean = values2_eu.replace(0, np.nan)
+avg_total_values2_eu = values2_eu_clean.mean(skipna=True)
 
-total_values3_eu = values3_eu.sum()
-country_count = len(rows_ca)
-avg_total_values3_eu = total_values3_eu / country_count
+values3_eu_clean = values3_eu.replace(0, np.nan)
+avg_total_values3_eu = values3_eu_clean.mean(skipna=True)
 
-total_values4_eu = values4_eu.sum()
-country_count = len(rows_ca)
-avg_total_values4_eu = total_values4_eu / country_count
+values4_eu_clean = values4_eu.replace(0, np.nan)
+avg_total_values4_eu = values4_eu_clean.mean(skipna=True)
 
-total_values5_eu = values5_eu.sum()
-country_count = len(rows_ca)
-avg_total_values5_eu = total_values5_eu / country_count
+values5_eu_clean = values5_eu.replace(0, np.nan)
+avg_total_values5_eu = values5_eu_clean.mean(skipna=True)
 
-total_values6_eu = values6_eu.sum()
-country_count = len(rows_ca)
-avg_total_values6_eu = total_values6_eu / country_count
+values6_eu_clean = values6_eu.replace(0, np.nan)
+avg_total_values6_eu = values6_eu_clean.mean(skipna=True)
 ```
-- values.sum creates a sum of all scores within country
-- country count is equal to the total number of indeces within each set of rows
-- avg = sum / n of rows
+Explanation: 
+- values1_eu.replace(0, np.nan) replaces any '0' values with numpy 'nan' values so that they can be cleaned out in the following line.
+- values3_eu_clean.mean(skipna=True) cleans the list to ensure no empty values interfere with the calculation, and then computes a regional avg.
+##### World Data Display
+The following code is used to display the regional averages for world literacy results, the same is applied for mathematics albeit with different avg values.
+```
+# ----- WORLD LITERACY 
+
+values1_w = [
+    avg_total_values1_scan,  
+    avg_total_values1_eu,    
+    avg_total_values1_ca,    
+    avg_total_values1_sa,    
+    avg_total_values1_me,    
+    avg_total_values1_oc,
+    values1_can             
+] 
+
+values2_w = [
+    np.nan,                  
+    avg_total_values2_eu,    
+    avg_total_values2_ca,    
+    avg_total_values2_sa,    
+    np.nan,                  
+    np.nan,                  
+    np.nan                  
+] 
+
+values3_w = [
+    avg_total_values2_scan,  
+    avg_total_values3_eu,    
+    avg_total_values3_ca,    
+    avg_total_values3_sa,    
+    avg_total_values2_me,    
+    avg_total_values2_oc,    
+    values2_can              
+] 
+
+with open("regions.txt", "r") as txt_file:
+    lines = txt_file.readlines()
+
+labels = lines[:7]
+
+x = np.arange(len(labels)) 
+width = 0.2
+
+fig, ax = plt.subplots(figsize=(12, 6))
+ax.bar(x - width, values1_w, width, label='Mid-Primary School')
+ax.bar(x, values2_w, width, label='End-Primary School')
+ax.bar(x + width, values3_w, width, label='End-High School')
+
+ax.set_xticks(x)
+ax.set_xticklabels(labels)
+ax.set_ylabel('Score (% of students meeting basic profiency)')
+ax.set_title('World Student Literacy Performance')
+ax.legend()
+plt.savefig('world_literacy.png')
+plt.show()
+```
+Explanation:
+- values1_w and its accompanying lists store each regional average.
+- The following code creates the graph labels using the text file (create_txt.py) containing each region name: Scandanavia, Europe, Central America, South America, Middle East Oceania, Canada
+```
+with open("regions.txt", "r") as txt_file:
+    lines = txt_file.readlines()
+
+labels = lines[:7]
+```
+- It then displays using matplotlib as per usual
+### Week 4 continued
+#### App.py
+The app.py code is used to create an accessible and comprehensive GUI using streamlit (https://streamlit.io/) to display all of the data alongside my thesis and findings. I will not elaborate on explanations here.
 ## Findings Analysis
 The research carried out in this project has served to indicate a few general trends that warrant discussion across, seperately, literacy and mathematics. Throughout the world, in literacy, there is a common downard trend from mid-primary school to the end of high school, with a mean decline of 22.65% across all regions. Although the drop is more substantial in developing countries, the trend is markedly visible all across the globe and, given the roughly even distribution of rich and poor countries, the average decline seems adequetly descriptive of the general trend.
 
