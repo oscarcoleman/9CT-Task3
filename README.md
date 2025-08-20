@@ -25,9 +25,20 @@ Students within western Europe, however, are shown with similiar assessment data
 - https://www.unesco.org/en/articles/effects-pandemic-education-latin-america-and-caribbean-will-last-many-years-there-urgent-need
 - https://www.iea.nl/sites/default/files/2020-12/TIMSS-2019-International-Results-in-Mathematics-and-Science.pdf
 - https://www.iea.nl/sites/default/files/2020-12/TIMSS-2019-International-Results-in-Mathematics-and-Science.pdf
+## Data Dictionary
+The following data dictionary is in reference to the [Global_Ed_Cleaned2 csv](https://github.com/oscarcoleman/9CT-Task3/blob/main/Global_Ed_Cleaned2.csv):
+
+|Field                                   | Datatype   | Format for display | Description                                                                                    | Example   | Validation |
+|----------------------------------------|------------|--------------------|------------------------------------------------------------------------------------------------|-----------|------------|
+|Countries and areas	                   |String      |XX...XX             |Name of country being measured                                                                  |Australia  |Can be any amount of letters, must not contain numbers|
+|Grade_2_3_Proficiency_Reading           |Integer     |NNN                 |Percentage score of Grade 2-3 students meeting basic proficiency in literacy                    |50         |1 to three integers, from 0-100 |
+|Grade_2_3_Proficiency_Math              |Integer     |NNN                 |Percentage score of Grade 2-3 students meeting basic proficiency in math                        |50         |1 to three integers, from 0-100 |
+|Primary_End_Proficiency_Reading         |Integer     |NNN                 |Percentage score of students at the end of primary school meeting basic proficiency in literacy |50         |1 to three integers, from 0-100 |
+|Primary_End_Proficiency_Math            |Integer     |NNN                 |Percentage score of students at the end of primary school meeting basic proficiency in math     |50         |1 to three integers, from 0-100 |
+|Lower_Secondary_End_Proficiency_Reading |Integer     |NNN                 |Percentage score of students at the end of high school meeting basic proficiency in literacy    |50         |1 to three integers, from 0-100 |
+|Lower_Secondary_End_Proficiency_Math    |Integer     |NNN                 |Percentage score of students at the end of high school meeting basic proficiency in math        |50         |1 to three integers, from 0-100 |
+
 ## Code
-### Raw CSV file
-https://www.kaggle.com/datasets/nelgiriyewithana/world-educational-data
 ### Week 2 and Week 3
 I developed the code for filtering rows and columns for desired countries:
 #### Filter_columns.py
