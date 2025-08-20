@@ -1,7 +1,4 @@
 # 9CT-Task3
-## GUI
-My Streamlit app containing the completion of my findings alongside my thesis and data is accessible via the following URL:
-https://9ct-task3-w5qozqkaydwelghspbwktn.streamlit.app/ 
 ## Mind map
 ![Mind Map](Mind_map.png)
 ## Thesis
@@ -247,6 +244,9 @@ labels = lines[:7]
 ### Week 4 continued
 #### App.py
 The app.py code is used to create an accessible and comprehensive GUI using streamlit (https://streamlit.io/) to display all of the data alongside my thesis and findings. I will not elaborate on explanations here.
+## GUI
+My Streamlit app containing the completion of my findings alongside my thesis and data is accessible via the following URL:
+https://9ct-task3-w5qozqkaydwelghspbwktn.streamlit.app/ 
 ## Findings Analysis
 The research carried out in this project has served to indicate a few general trends that warrant discussion across, seperately, literacy and mathematics. Throughout the world, in literacy, there is a common downard trend from mid-primary school to the end of high school, with a mean decline of 22.65% across all regions. Although the drop is more substantial in developing countries, the trend is markedly visible all across the globe and, given the roughly even distribution of rich and poor countries, the average decline seems adequetly descriptive of the general trend.
 
