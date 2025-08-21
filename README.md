@@ -1,17 +1,16 @@
 # 9CT-Task3
-## GUI
-My Streamlit app containing the completion of my findings alongside my thesis and data is accessible via the following URL:
-https://9ct-task3-w5qozqkaydwelghspbwktn.streamlit.app/ 
 ## Mind map
 ![Mind Map](Mind_map.png)
 ## Thesis
 From primary school to the end of high school, are students getting more or less proficient in literacy and mathematics, in Middle East, Central America, South America, Europe, Scandanavia, Oceania and Canada, comparatively?
+## Raw CSV file from Kaggle
+https://www.kaggle.com/datasets/nelgiriyewithana/world-educational-data 
 ## Functional and Non-Functional Requirements
 ### Functional
 - Filters global_education.csv for grade_2_3_proficiency_reading, grade_2_3_proficiency_math, lower_secondary_end_proficiency_reading, lower_secondary_end_proficiency_math, youths_15_24_literacy_rates_male, and youths_15_24_literacy_rates_female columns
 - Filters for the countries Argentina, Australia, Brazil, Canada, Chile, Colombia, Dominican Republic, Ecuador, Finland, France, Georgia, Germany, Guatemala, Qatar, Republic of Ireland, Mexico, Netherlands, New Zealand, Norway, Panama, Paraguay, Peru, Poland, Portugal, Saudi Arabia, Slovakia, Sweden, U.A.E
 - Computes regional averages
-- Visualise data in a bar graph, with primary school and high school data per country side-by-side, one red and one blue.
+- Visualise data in a bar graph, with primary school and high school data per country side-by-side, each distintly coloured.
 ### Non-Functional
 - Usability: GUI must allow simple interaction with data, "README" document oultines all aspects of the project, including thesis, requirements, code tests, and evaluation.
 - Reliability: Data is cross-referenced and compared to various sources.
@@ -25,9 +24,20 @@ Students within western Europe, however, are shown with similiar assessment data
 - https://www.unesco.org/en/articles/effects-pandemic-education-latin-america-and-caribbean-will-last-many-years-there-urgent-need
 - https://www.iea.nl/sites/default/files/2020-12/TIMSS-2019-International-Results-in-Mathematics-and-Science.pdf
 - https://www.iea.nl/sites/default/files/2020-12/TIMSS-2019-International-Results-in-Mathematics-and-Science.pdf
+## Data Dictionary
+The following data dictionary is in reference to the [Global_Ed_Cleaned2 csv](https://github.com/oscarcoleman/9CT-Task3/blob/main/Global_Ed_Cleaned2.csv):
+
+|Field                                   | Datatype   | Format for display | Description                                                                                    | Example   | Validation |
+|----------------------------------------|------------|--------------------|------------------------------------------------------------------------------------------------|-----------|------------|
+|Countries and areas	                   |String      |XX...XX             |Name of country being measured                                                                  |Australia  |Can be any amount of letters, must not contain numbers|
+|Grade_2_3_Proficiency_Reading           |Integer     |NNN                 |Percentage score of Grade 2-3 students meeting basic proficiency in literacy                    |50         |1 to three integers, from 0-100 |
+|Grade_2_3_Proficiency_Math              |Integer     |NNN                 |Percentage score of Grade 2-3 students meeting basic proficiency in math                        |50         |1 to three integers, from 0-100 |
+|Primary_End_Proficiency_Reading         |Integer     |NNN                 |Percentage score of students at the end of primary school meeting basic proficiency in literacy |50         |1 to three integers, from 0-100 |
+|Primary_End_Proficiency_Math            |Integer     |NNN                 |Percentage score of students at the end of primary school meeting basic proficiency in math     |50         |1 to three integers, from 0-100 |
+|Lower_Secondary_End_Proficiency_Reading |Integer     |NNN                 |Percentage score of students at the end of high school meeting basic proficiency in literacy    |50         |1 to three integers, from 0-100 |
+|Lower_Secondary_End_Proficiency_Math    |Integer     |NNN                 |Percentage score of students at the end of high school meeting basic proficiency in math        |50         |1 to three integers, from 0-100 |
+
 ## Code
-### Raw CSV file
-https://www.kaggle.com/datasets/nelgiriyewithana/world-educational-data
 ### Week 2 and Week 3
 I developed the code for filtering rows and columns for desired countries:
 #### Filter_columns.py
@@ -234,9 +244,16 @@ labels = lines[:7]
 ### Week 4 continued
 #### App.py
 The app.py code is used to create an accessible and comprehensive GUI using streamlit (https://streamlit.io/) to display all of the data alongside my thesis and findings. I will not elaborate on explanations here.
+## GUI
+My Streamlit app containing the completion of my findings alongside my thesis and data is accessible via the following URL:
+https://9ct-task3-w5qozqkaydwelghspbwktn.streamlit.app/ 
 ## Findings Analysis
 The research carried out in this project has served to indicate a few general trends that warrant discussion across, seperately, literacy and mathematics. Throughout the world, in literacy, there is a common downard trend from mid-primary school to the end of high school, with a mean decline of 22.65% across all regions. Although the drop is more substantial in developing countries, the trend is markedly visible all across the globe and, given the roughly even distribution of rich and poor countries, the average decline seems adequetly descriptive of the general trend.
 
 In mathematics, the most pronounced pattern is not one all-encompassing and general trend, but rather the substantial distinction between the developed and developing countries. While in the developed regions, such as Europe and Scandanavia, but also the given Middle Eastern countries, mathematical proficiency remains fairly steady throughout schooling (mostly around 80-90%, but closer to 30-40% for the Middle East), the undeveloped regions of Central and South America (including the Carribeans) undergo a severe drop, between mid-primary school and the end of high school, in excess of 50%, on average. 
 
 Beyond the key general trends to be extracted, there remain some specific regional anomalies worthy of note. Particularly, while it is to be seen that most European countries have neglibible or minimally improved change in academic performance from early primary school to the end of high school, France's scores are shown to improve by a margin of roughly 30%. Nevertheless, outstanding instances such as these are seldom, and it is visible that each individual region holds within it a common and generally observable trend.
+## Conclusion
+While, as shown in the above analysis, the results are indeed multifaceted, it may generally be stated that students academic performance remains stagnant or declines as they progress from primary school to high school.
+## Evaluation
+On the whole, I would consider myself to have carried out a complete and comprehensive projects that has met the demands initially laid out, alongside answering the research thesis in thorough detail. First of all, concerning the functional requirements, my project successfully filters out of the raw csv file each desired countries and their proficiency scores, which is then taken to be visualised, precisely as desired, using matplotlib and with all regional averages accurately computed. Regarding the non-functional requirements, the GUI extensively covers all aspects of the research results that may be of interest, ensuring that it is highly accessible in a straightfoward and interconnected manner. Moreover, the README file in which I am writing this evaluation includes complete week-by-week documentation, alongside all other project components — data dictionaries, requiremnts, analysis, etcetera — either explicity shown or linked. To sum, I do indeed believe that my project has been fulfilled to the best of my ability, with the results to be seen comprehensively within this github repository. 
